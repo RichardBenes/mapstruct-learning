@@ -7,4 +7,5 @@ public class ProfileDTO {
 
     String name;
     int age;
+    private final String placeOfLiving;
 }
