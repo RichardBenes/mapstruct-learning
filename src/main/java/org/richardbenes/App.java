@@ -1,13 +1,21 @@
 package org.richardbenes;
 
-/**
- * Hello world!
- *
- */
-public class App 
+import org.mapstruct.factory.Mappers;
+import org.richardbenes.profiles.Profile;
+import org.richardbenes.profiles.ProfileMapper;
+
+public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        var john = new Profile("Barley", 17);
+
+        System.out.println(john.getDescription());
+
+        var mapper = Mappers.getMapper(ProfileMapper.class);
+
+        var dto = mapper.profileToDto(john);
+
+        System.out.println(dto);
     }
 }
