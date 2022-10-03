@@ -10,6 +10,9 @@ public interface CarMapper {
     @Mapping(target = "id", source = "engine.id")
     Car engineAndPaintingToCar(Engine engine, Painting painting);
 
+    @Mapping(target = "id", source = "engineId")
+    Car engineAndPaintingToCar(int engineId, String type, Painting painting);
+
     CarMapper INSTANCE = Mappers.getMapper(CarMapper.class);
 
     static void main(String[] args) {
@@ -20,5 +23,9 @@ public interface CarMapper {
         var car = INSTANCE.engineAndPaintingToCar(engine, painting);
 
         System.out.println(car);
+
+        var car2 = INSTANCE.engineAndPaintingToCar(3, "wankel", painting);
+
+        System.out.println(car2);
     }
 }
