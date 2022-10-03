@@ -6,6 +6,10 @@ import lombok.Data;
 @Data
 public class Stone {
 
+//    public Stone() {
+//        System.out.println("new Stone()");
+//    }
+
     public Stone(int weight, int maxDimension) {
         System.out.println("new Stone(int, int)");
         this.weight = weight;
