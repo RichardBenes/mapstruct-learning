@@ -7,14 +7,15 @@ import org.mapstruct.factory.Mappers;
 @Mapper
 public interface CarMapper {
 
-    Car engineAndPaintingToCar(Engine e, Painting p);
+    @Mapping(target = "id", source = "engine.id")
+    Car engineAndPaintingToCar(Engine engine, Painting painting);
 
     CarMapper INSTANCE = Mappers.getMapper(CarMapper.class);
 
     static void main(String[] args) {
 
-        var engine = new Engine(21, "petrol");
-        var painting = new Painting("red", "glossy");
+        var engine = new Engine(1,21, "petrol");
+        var painting = new Painting(2,"red", "glossy");
 
         var car = INSTANCE.engineAndPaintingToCar(engine, painting);
 
