@@ -1,4 +1,4 @@
-package org.richardbenes.profiles.users;
+package org.richardbenes.profiles;
 
 import lombok.Data;
 

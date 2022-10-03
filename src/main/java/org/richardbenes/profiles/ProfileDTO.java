@@ -5,7 +5,8 @@ import lombok.Data;
 @Data
 public class ProfileDTO {
 
-    String name;
-    int age;
+    private final String name;
+    private final int age;
     private final String placeOfLiving;
+    private final String interests;
 }
