@@ -107,7 +107,7 @@
         <artifactId>exec-maven-plugin</artifactId>
         <version>3.0.0</version>
         <configuration>
-          <mainClass>org.richardbenes.stones.StoneMapper</mainClass>
+          <mainClass>org.richardbenes.phones.PhoneMapper</mainClass>
         </configuration>
       </plugin>
     </plugins>
