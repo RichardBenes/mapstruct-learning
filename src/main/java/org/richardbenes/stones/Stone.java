@@ -15,9 +15,8 @@ public class Stone {
         this.weight = weight;
         this.maxDimension = maxDimension;
     }
-
-    @Default
-    public Stone(String weight, String maxDimension) {
+    
+    protected Stone(String weight, String maxDimension) {
         System.out.println("new Stone(String, String)");
         this.weight = Integer.parseInt(weight);
         this.maxDimension = Integer.parseInt(maxDimension);
